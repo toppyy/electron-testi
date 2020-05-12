@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
     getUrlAsBase64('https://picsum.photos/200').then(pic => {
       const picContainer = document.getElementById('pic-container')
       const img = document.createElement('img')
-      img.setAttribute('src','data:image/png;base64,' +pic)
+      img.setAttribute('src','data:image/png;base64,' + pic)
       picContainer.appendChild(img)
     })
    

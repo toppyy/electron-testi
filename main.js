@@ -8,6 +8,7 @@ function createWindow () {
     width: 800,
     height: 600,
     webPreferences: {
+      contextIsolation: true,
       preload: path.join(__dirname, 'preload.js')
     }
   })
@@ -35,10 +36,6 @@ app.whenReady().then(() => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
 
-  let menu = Menu.getApplicationMenu()
-  menu.append(new MenuItem({ label: 'Picture time', click() { console.log('item 1 clicked') } }))
-
-  Menu.setApplicationMenu(menu)
 
 })
 
