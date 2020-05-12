@@ -1,10 +1,12 @@
 {
-  "name": "electron-quick-start",
+  "name": "ATagger",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package2": "electron-packager .",
+    "package": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --prune=true --out=release-builds"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -17,6 +19,8 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^8.2.5"
+    "axios": "^0.19.2",
+    "electron": "^8.2.5",
+    "electron-packager": "^14.2.1"
   }
 }
