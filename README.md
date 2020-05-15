@@ -13,3 +13,4 @@ npm install
 npm start
 ```
 
+https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/quickstarts-sdk/client-library?pivots=programming-language-javascript
