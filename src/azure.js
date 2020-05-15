@@ -11,15 +11,14 @@ const headers = {
 }
 
 const image_URL = 'http://foot.hiit.fi/jalka.jpg'
-
-
-var API_URL = API_ENDPOINT + "/vision/v2.1/analyze?visualFeatures=Tags&language=en";
-
-
-
+const API_URL = API_ENDPOINT + "/vision/v2.1/analyze?visualFeatures=Tags&language=en";
 
 const tagImage = url => {
     return axios.post(API_URL,{"url": url },{  headers: headers    })
 }
 
-tagImage(image_URL).then(d => console.log(d.data.tags))
+tagImage(image_URL).then(response => { 
+    console.log(
+        response.data.tags.map(tag => ({ 'label': tag.name.toLowerCase(), 'accuracy': tag.confidence }))
+    )
+ })
