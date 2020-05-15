@@ -13,12 +13,11 @@ const headers = {
 const image_URL = 'http://foot.hiit.fi/jalka.jpg'
 const API_URL = API_ENDPOINT + "/vision/v2.1/analyze?visualFeatures=Tags&language=en";
 
-const tagImage = url => {
-    return axios.post(API_URL,{"url": url },{  headers: headers    })
-}
 
-tagImage(image_URL).then(response => { 
+const manipulateTag = tag => ({ 'label': tag.name.toLowerCase(), 'accuracy': tag.confidence })
+
+axios.post(API_URL,{"url": image_URL },{ headers: headers }).then(response => { 
     console.log(
-        response.data.tags.map(tag => ({ 'label': tag.name.toLowerCase(), 'accuracy': tag.confidence }))
+        response.data.tags.map(manipulateTag)
     )
  })
