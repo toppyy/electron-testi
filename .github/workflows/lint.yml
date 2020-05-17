@@ -19,7 +19,7 @@ jobs:
           node-version: 12
 
       - name: Install dependencies
-        run: yarn install
+        run: npm install
 
       - name: Run linters
         run: |

@@ -1,5 +1,8 @@
 # electron-testi
 
+![Greet Everyone](https://github.com/toppyy/electron-testi/workflows/Greet%20Everyone/badge.svg)
+![Lint](https://github.com/toppyy/electron-testi/workflows/Lint/badge.svg)
+
 Otettu täältä pohja:
  https://github.com/electron/electron-quick-start
 
@@ -13,4 +16,3 @@ npm install
 npm start
 ```
 
-![Greet Everyone](https://github.com/toppyy/electron-testi/workflows/Greet%20Everyone/badge.svg)
